@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-</head>
-<body>
-    <script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Your Page Title</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <h1>Function <code>triangle(value1, type1, value2, type2)</code></h1>
 
-</body>
+        <p>
+            <strong>Опис:</strong> Обчислює сторони та кути прямокутного
+            трикутника на основі введених параметрів.
+        </p>
+
+        <p><strong>Параметри:</strong></p>
+        <ul>
+            <li>
+                <code>value1:</code> Числове значення, пов'язане з першим
+                параметром.
+            </li>
+            <li>
+                <code>type1:</code> Тип першого параметра, можливі значення:
+                "leg", "hypotenuse", "adjacent angle", "opposite angle",
+                "angle".
+            </li>
+            <li>
+                <code>value2:</code> Числове значення, пов'язане з другим
+                параметром.
+            </li>
+            <li>
+                <code>type2:</code> Тип другого параметра, можливі значення такі
+                ж, як для <code>type1</code>.
+            </li>
+        </ul>
+
+        <p>
+            <strong>Повертає:</strong> Рядок із значеннями сторін та кутів
+            прямокутного трикутника або повідомлення про помилку, якщо така
+            виникла.
+        </p>
+    </body>
 </html>
