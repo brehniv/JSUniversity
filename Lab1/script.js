@@ -1,7 +1,11 @@
+function round2(number) {
+    const roundedNumber = number.toFixed(2);
+    return parseFloat(roundedNumber);
+}
 function triangle(value1, type1, value2, type2) {
     // Перевірка на некоректність уведених значень
     if (value1 <= 0 || value2 <= 0) {
-        return "failed: Значення повинні бути додатні";
+        return "failed: value must be possitive";
     }
     const validTypes = [
         "leg",
@@ -144,7 +148,9 @@ function triangle(value1, type1, value2, type2) {
             }
             break;
     }
-    return `a = ${a}, b = ${b}, c = ${c}, alpha = ${alpha}°, beta = ${beta}°`;
+    return `a = ${round2(a)}\nb = ${round2(b)}\nc = ${round2(
+        c
+    )}\nalpha = ${round2(alpha)}°\nbeta = ${round2(beta)}°\n"success"`;
 }
 
 // Test Cases for leg-leg scenario
@@ -154,7 +160,7 @@ console.log(triangle(3, "leg", 4, "leg"));
 console.log(triangle(3, "leg", 5, "hypotenuse"));
 
 // Test Cases for leg-adjacent angle scenario
-console.log(triangle(3, "leg", 45, "adjacent angle"));
+console.log(triangle(4, "leg", 8, "adjacent angle"));
 
 // Test Cases for leg-opposite angle scenario
 console.log(triangle(3, "leg", 45, "opposite angle"));
