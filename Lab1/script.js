@@ -163,24 +163,3 @@ function triangle(value1, type1, value2, type2) {
     );
     return "success";
 }
-console.log(triangle(3, "leg", 4, "leg")); // success
-console.log(triangle(5, "leg", 13, "hypotenuse")); // success
-console.log(triangle(30, "angle", 5, "hypotenuse")); // success
-console.log(triangle(40, "opposite angle", 8, "leg")); // success
-console.log(triangle(20, "adjacent angle", 10, "leg")); // success
-console.log(triangle(25, "hypotenuse", 15, "leg")); // success
-console.log(triangle(60, "angle", 7, "hypotenuse")); // success
-console.log(triangle(70, "opposite angle", 9, "hypotenuse")); // success
-console.log(triangle(45, "adjacent angle", 12, "leg")); // success
-console.log(triangle(90, "leg", 8, "hypotenuse")); // success
-console.log(triangle(50, "angle", 6, "hypotenuse")); // success
-console.log(triangle(75, "opposite angle", 11, "leg")); // success
-console.log(triangle(80, "adjacent angle", 14, "leg")); // success
-console.log(triangle(15, "hypotenuse", 17, "leg")); // success
-console.log(triangle(70, "angle", 8, "hypotenuse")); // success
-console.log(triangle(35, "opposite angle", 6, "hypotenuse")); // success
-console.log(triangle(55, "adjacent angle", 9, "leg")); // success
-console.log(triangle(20, "leg", 21, "hypotenuse")); // success
-console.log(triangle(75, "angle", 11, "hypotenuse")); // success
-console.log(triangle(48, "opposite angle", 10, "leg")); // success
-console.log(triangle(62, "adjacent angle", 13, "leg")); // success
