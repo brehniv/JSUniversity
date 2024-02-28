@@ -18,7 +18,10 @@ function triangle(value1, type1, value2, type2) {
     if (!validTypes.includes(type1) || !validTypes.includes(type2)) {
         return "failed: input types error";
     }
-    if ((type1 === "hypotenuse" && type2 === "leg") || (type1 === "leg" && type2 === "hypotenuse")) {
+    if (
+        (type1 === "hypotenuse" && type2 === "leg") ||
+        (type1 === "leg" && type2 === "hypotenuse")
+    ) {
         if (value1 === value2) {
             return "failed: hypotenuse cannot be equal to leg";
         }
@@ -60,15 +63,15 @@ function triangle(value1, type1, value2, type2) {
                     }
                     case "adjacent angle": {
                         alpha = value2;
-                        b = a / Math.cos(alpha * (Math.PI / 180));
-                        c = Math.sqrt(c ** 2 - a ** 2);
+                        c = a / Math.cos(alpha * (Math.PI / 180));
+                        b = Math.sqrt(c ** 2 - a ** 2);
                         beta = 90 - alpha;
                         break;
                     }
                     case "opposite angle": {
                         beta = value2;
-                        b = a / Math.sin(beta);
-                        c = Math.sqrt(c ** 2 - a ** 2);
+                        c = a / Math.sin(beta * (Math.PI / 180));
+                        b = Math.sqrt(c ** 2 - a ** 2);
                         alpha = 90 - beta;
                         break;
                     }
