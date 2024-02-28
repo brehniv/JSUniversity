@@ -18,6 +18,11 @@ function triangle(value1, type1, value2, type2) {
     if (!validTypes.includes(type1) || !validTypes.includes(type2)) {
         return "failed: input types error";
     }
+    if ((type1 === "hypotenuse" && type2 === "leg") || (type1 === "leg" && type2 === "hypotenuse")) {
+        if (value1 === value2) {
+            return "failed: hypotenuse cannot be equal to leg";
+        }
+    }
     if (anglesList.includes(type1)) {
         if (value1 < 0 || value1 > 90) {
             return "failed: incorect angle " + type1;
@@ -55,15 +60,15 @@ function triangle(value1, type1, value2, type2) {
                     }
                     case "adjacent angle": {
                         alpha = value2;
-                        c = a / Math.cos(alpha * (Math.PI / 180));
-                        b = Math.sqrt(c ** 2 - a ** 2);
+                        b = a / Math.cos(alpha * (Math.PI / 180));
+                        c = Math.sqrt(c ** 2 - a ** 2);
                         beta = 90 - alpha;
                         break;
                     }
                     case "opposite angle": {
                         beta = value2;
-                        c = a / Math.sin(beta);
-                        b = Math.sqrt(c ** 2 - a ** 2);
+                        b = a / Math.sin(beta);
+                        c = Math.sqrt(c ** 2 - a ** 2);
                         alpha = 90 - beta;
                         break;
                     }
@@ -155,64 +160,24 @@ function triangle(value1, type1, value2, type2) {
     );
     return "success";
 }
-/*
-// // Test Cases for leg-leg scenario
-// console.log(triangle(3, "leg", 4, "leg"));
-
-// // Test Cases for leg-hypotenuse scenario
-// console.log(triangle(3, "leg", 5, "hypotenuse"));
-
-// // Test Cases for leg-adjacent angle scenario
-// console.log(triangle(4, "leg", 8, "adjacent angle"));
-
-// // Test Cases for leg-opposite angle scenario
-// console.log(triangle(3, "leg", 45, "opposite angle"));
-
-// // Test Cases for hypotenuse-leg scenario
-// console.log(triangle(5, "hypotenuse", 4, "leg"));
-
-// // Test Cases for hypotenuse-angle scenario
-// console.log(triangle(5, "hypotenuse", 30, "angle"));
-
-// // Test Cases for opposite angle-leg scenario
-// console.log(triangle(45, "opposite angle", 3, "leg"));
-
-// // Test Cases for opposite angle-hypotenuse scenario
-// console.log(triangle(45, "opposite angle", 5, "hypotenuse"));
-
-// // Test Cases for adjacent angle-leg scenario
-// console.log(triangle(45, "adjacent angle", 3, "leg"));
-
-// // Test Cases for adjacent angle-hypotenuse scenario
-// console.log(triangle(45, "adjacent angle", 5, "hypotenuse"));
-
-// // Test Cases for angle-hypotenuse scenario
-// console.log(triangle(30, "angle", 6, "hypotenuse"));
-
-// // Test Cases for invalid input (negative leg)
-// console.log(triangle(-3, "leg", 4, "leg"));
-
-// // Test Cases for invalid input (negative angle)
-// console.log(triangle(3, "angle", -45, "opposite angle"));
-
-// // Test Cases for invalid input (hypotenuse smaller than leg)
-// console.log(triangle(5, "hypotenuse", 6, "leg"));
-
-// // Test Cases for invalid input (invalid type)
-// console.log(triangle(3, "invalid", 4, "leg"));
-
-// // Test Cases for invalid input (two hypotenuse)
-// console.log(triangle(5, "hypotenuse", 4, "hypotenuse"));
-
-// // Test Cases for leg-leg scenario with large values
-// console.log(triangle(1000, "leg", 2000, "leg"));
-
-// // Test Cases for hypotenuse-angle scenario with large values
-// console.log(triangle(1500, "hypotenuse", 75, "angle"));
-
-// // Test Cases for adjacent angle-leg scenario with large values
-// console.log(triangle(80, "adjacent angle", 1200, "leg"));
-
-// // Test Cases for opposite angle-hypotenuse scenario with large values
-// console.log(triangle(85, "opposite angle", 2500, "hypotenuse"));
-*/
+console.log(triangle(3, "leg", 4, "leg")); // success
+console.log(triangle(5, "leg", 13, "hypotenuse")); // success
+console.log(triangle(30, "angle", 5, "hypotenuse")); // success
+console.log(triangle(40, "opposite angle", 8, "leg")); // success
+console.log(triangle(20, "adjacent angle", 10, "leg")); // success
+console.log(triangle(25, "hypotenuse", 15, "leg")); // success
+console.log(triangle(60, "angle", 7, "hypotenuse")); // success
+console.log(triangle(70, "opposite angle", 9, "hypotenuse")); // success
+console.log(triangle(45, "adjacent angle", 12, "leg")); // success
+console.log(triangle(90, "leg", 8, "hypotenuse")); // success
+console.log(triangle(50, "angle", 6, "hypotenuse")); // success
+console.log(triangle(75, "opposite angle", 11, "leg")); // success
+console.log(triangle(80, "adjacent angle", 14, "leg")); // success
+console.log(triangle(15, "hypotenuse", 17, "leg")); // success
+console.log(triangle(70, "angle", 8, "hypotenuse")); // success
+console.log(triangle(35, "opposite angle", 6, "hypotenuse")); // success
+console.log(triangle(55, "adjacent angle", 9, "leg")); // success
+console.log(triangle(20, "leg", 21, "hypotenuse")); // success
+console.log(triangle(75, "angle", 11, "hypotenuse")); // success
+console.log(triangle(48, "opposite angle", 10, "leg")); // success
+console.log(triangle(62, "adjacent angle", 13, "leg")); // success
