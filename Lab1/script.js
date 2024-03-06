@@ -4,8 +4,8 @@ function round2(number) {
 }
 function triangle(value1, type1, value2, type2) {
     // Перевірка на некоректність уведених значень
-    if (value1 <= 0 || value2 <= 0) {
-        return "failed: value must be possitive";
+    if (value1 <= 0.01 || value2 <= 0.01) {
+        return "failed: value must be possitive or bigger";
     }
     const validTypes = [
         "leg",
@@ -155,6 +155,9 @@ function triangle(value1, type1, value2, type2) {
                 }
             }
             break;
+    }
+    if (beta <= 0.01 || alpha <= 0.01) {
+        return "failed: after calculation angle smaller than or equal to zero";
     }
     console.log(
         `a = ${round2(a)}\nb = ${round2(b)}\nc = ${round2(c)}\nalpha = ${round2(
