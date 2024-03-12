@@ -21,16 +21,15 @@ function Task1() {
         tuning: false,
         numberOfAccidents: 2,
     };
+    car1.drive = function () {
+        console.log("I am not driving at night.");
+    };
     car2.drive = function () {
         console.log("I am driving anytime.");
     };
-    car1.drive = () => {
-        console.log("I am not driving at night».");
-    };
-    console.log(car1);
+
     car1.drive();
     car2.drive();
-    console.log(car2);
 
     function Truck(color, weight, avgSpeed, brand, model) {
         this.color = color;
@@ -71,8 +70,8 @@ function Task1() {
     truck2.AssignDriver("Ivan", false, 1);
     truck1.trip();
     truck2.trip();
-    console.log(truck1, truck2);
 }
+Task1();
 // 1.2.12
 class Square {
     constructor(a) {
