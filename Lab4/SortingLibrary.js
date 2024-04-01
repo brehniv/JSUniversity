@@ -73,8 +73,7 @@ const SortingLibrary = (() => {
             comparisons++;
             while (
                 j >= 0 &&
-                ((order === "asc" && cleared[j] > key) ||
-                    (order === "desc" && cleared[j] < key))
+                (order === "asc" ? cleared[j] > key : cleared[j] < key)
             ) {
                 comparisons++;
                 cleared[j + 1] = cleared[j];
@@ -106,8 +105,9 @@ const SortingLibrary = (() => {
                 comparisons++;
                 while (
                     j >= gap &&
-                    ((order === "asc" && cleared[j - gap] > temp) ||
-                        (order === "desc" && cleared[j - gap] < temp))
+                    (order === "asc"
+                        ? cleared[j - gap] > temp
+                        : cleared[j - gap] < temp)
                 ) {
                     cleared[j] = cleared[j - gap];
                     j -= gap;

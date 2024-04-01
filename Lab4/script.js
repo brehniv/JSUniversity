@@ -10,7 +10,7 @@ for (let i = 0; i < 100; i++) {
     }
 }
 console.log("Unsorted sparse array:", arr2);
-console.log("Exchange sorted array:", SortingLibrary.bubbleSort(arr2, "asc"));
+console.log("Bubble sorted array:", SortingLibrary.bubbleSort(arr2, "asc"));
 console.log(
     "Min element sorted array:",
     SortingLibrary.minElementSort([...arr2], "asc")
@@ -25,16 +25,21 @@ console.log("Quick sorted array:", SortingLibrary.quickSort([...arr2], "asc"));
 console.log(("-".repeat(30) + "\n").repeat(3));
 console.log("Unsorted array:", arr);
 console.log(
-    "Exchange sorted array:",
-    SortingLibrary.bubbleSort([...arr], "asc")
+    "Bubble sorted array:",
+    SortingLibrary.bubbleSort([...arr], "desc")
 );
 console.log(
     "Min element sorted array:",
-    SortingLibrary.minElementSort([...arr], "asc")
+    SortingLibrary.minElementSort([...arr], "desc")
 );
 console.log(
     "Insertion sorted array:",
-    SortingLibrary.insertionSort([...arr], "asc")
+    SortingLibrary.insertionSort([...arr], "desc")
 );
-console.log("Shell sorted array:", SortingLibrary.shellSort([...arr], "asc"));
-console.log("Quick sorted array:", SortingLibrary.quickSort([...arr], "asc"));
+console.log("Shell sorted array:", SortingLibrary.shellSort([...arr], "desc"));
+console.log("Quick sorted array:", SortingLibrary.quickSort([...arr], "desc"));
+
+console.log(
+    "Quick sorted array:",
+    SortingLibrary.quickSort(SortingLibrary.quickSort([...arr], "desc"), "asc")
+);
