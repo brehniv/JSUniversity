@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Lab5</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="header" class="header">
+                <h1>This game will take away your nerves</h1>
+                <div class="selectors">
+                    <h1>Select difficulty on game</h1>
+                    <div class="selector">
+                        <select id="diffSelector">
+                            <option value="20">Easy</option>
+                            <option value="10">Medium</option>
+                            <option value="5">Hard</option>
+                        </select>
+                    </div>
+                    <div class="selector">
+                        <h1>Select speed</h1>
+                        <select id="speedSelector">
+                            <option value="5">Slow</option>
+                            <option value="3">Normal</option>
+                            <option value="2">Fast</option>
+                        </select>
+                    </div>
+                    <input
+                        type="color"
+                        id="contColor"
+                        name="contColor"
+                        value="#031a9a"
+                    />
+                </div>
+                <button id="start">Start</button>
+                <div
+                    class="scoreCounter scoreCounterHeader"
+                    id="scoreCounterHeader"
+                >
+                    Score:
+                </div>
+            </div>
+            <div id="game-wind" class="game-wind">
+                <div class="scoreCounter" id="scoreCounter">Score:</div>
+                <div id="game-cont" class="game-cont">
+                    <div class="elem" id="elem"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

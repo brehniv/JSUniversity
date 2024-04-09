@@ -1,0 +1,96 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(96, 32, 206);
+}
+.header {
+    padding: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.selector {
+    padding: 4px;
+    text-align: center;
+}
+select {
+    appearance: none;
+    padding: 6px;
+    font-size: 32px;
+    border: 3px solid #031a9a;
+    background-color: #45cef1;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+select:hover {
+    border-color: #3498db;
+}
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3498db;
+}
+.game-cont {
+    background-color: #ffffff;
+    height: 90%;
+    position: absolute;
+    width: 100%;
+}
+.game-wind {
+    display: none;
+}
+.elem {
+    background-color: #031a9a;
+    position: absolute;
+}
+#start {
+    padding: 10px 20px;
+    background-color: rgb(43, 215, 241);
+    font-size: 24px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#start:hover {
+    background-color: rgb(8, 183, 210);
+}
+.scoreCounter {
+    font-size: 26px;
+    color: white;
+}
+.scoreCounterHeader {
+    display: none;
+}
+input[type="color"],
+textarea {
+    appearance: none;
+    padding: 6px;
+    font-size: 32px;
+    border: 3px solid #031a9a;
+    background-color: #45cef1;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    width: 40%;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="color"]:hover,
+textarea:hover {
+    border-color: #3498db;
+}
+
+input[type="color"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3498db;
+}
