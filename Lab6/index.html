@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lights Out</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="game-board"></div>
-<script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lights Out</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="menu">
+            <button id="new-game-btn">New Game</button>
+            <button id="restart-btn">Restart</button>
+            <div>Moves: <span id="moves">0</span></div>
+            <div>Minimum Moves: <span id="min-moves">0</span></div>
+        </div>
+        <div id="game-board"></div>
+        <div id="victory-message" style="display: none;">
+            <div>Congratulations! You won!</div>
+            <div id="optimal-moves-count"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

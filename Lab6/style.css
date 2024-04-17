@@ -1,23 +1,55 @@
-.cell {
-    width: 50px;
-    height: 50px;
-    background-color: #ddd;
-    border: 1px solid #aaa;
-    float: left;
+body {
+  background-color: #333;
+  color: #fff;
 }
-.off{
+
+#menu {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#victory-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  width: 120px; /* Одинаковая ширина кнопок */
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  float: left;
+}
+
+.off {
   background-color: #757070;
   border: 1px solid #aaa;
   float: left;
 }
-.on{
+
+.on {
   background-color: #fff;
   border: 1px solid #aaa;
   float: left;
 }
 
 .row::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
