@@ -19,7 +19,7 @@ button {
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
-  width: 120px; /* Одинаковая ширина кнопок */
+  width: 120px;
 }
 
 #game-board {

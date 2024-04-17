@@ -78,7 +78,6 @@ const toggleSwitch = (row, col) => {
     if (col < gridSize - 1) grid[row][col + 1] = !grid[row][col + 1];
 };
 
-// Обробка кліків по вимикачам
 function handleClick(event) {
     moves++;
     updateText("moves", moves);
