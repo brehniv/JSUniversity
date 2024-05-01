@@ -87,7 +87,7 @@
     };
 
     function buildAndShowCatalogItemsHTML(item, itemHTML) {
-        let finalHTML = "<section class='row'>";
+        let finalHTML = `<div class="col text-center mb-4"><h2>${item.cat_name}</h2></div><section class='row'>`;
         const catalogItems = item.objects;
 
         for (let i = 0; i < catalogItems.length; i++) {
